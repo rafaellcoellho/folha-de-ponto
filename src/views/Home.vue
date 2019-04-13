@@ -1,13 +1,11 @@
 <template>
-  <HelloWorld />
+  <h1>Opa</h1>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+export default {
+  components: {
 
-  export default {
-    components: {
-      HelloWorld
-    }
   }
+}
 </script>
