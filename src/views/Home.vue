@@ -1,58 +1,68 @@
 <template>
-  <v-card>
+<v-container fluid grid-list-xl>
+  <v-layout justify-center row fill-height>
+    <v-flex xs12 md10>
+      <v-card flat class="pa-5 card">
 
-    <v-card-title>
-      <h1>Folha de Pontos</h1>
-      <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="search"
-        label="Pesquisa"
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
+        <v-card-title >
+          <v-layout row wrap>
+            <v-flex xs12 class="title py-0">Folha de Ponto</v-flex>
+            <v-flex xs12 sm12 md4>
+              <v-text-field
+                v-model="search"
+                append-icon="search"
+                label="Pesquisa"
+                single-line
+                hide-details
+              ></v-text-field>
+            </v-flex>
+          </v-layout>
+        </v-card-title>
 
-    <v-data-table
-      :headers="headers"
-      :items="records"
-      :search="search"
-      :loading="loading"
-      no-data-text="Sem pontos para mostrar" 
-      no-results-text="Nenhum resultado encontrado"
-      rows-per-page-text="Linhas por página"
-    >
-      <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
-      <template v-slot:items="props">
-        <td>{{ props.item.day}}</td>
-        <td>{{ props.item.name }}</td>
-        <td>
-          <div v-for="hour in props.item.punchIn " :key="hour.time">
-            {{ hour | showHours }}
-          </div>
-        </td>
-        <td>
-          <div v-for="hour in props.item.pauseStart" :key="hour.time">
-            {{ hour | showHours }}
-          </div>
-        </td>
-        <td>
-          <div v-for="hour in props.item.pauseEnd" :key="hour.time">
-            {{ hour | showHours }}
-          </div>
-        </td>
-        <td>
-          <div v-for="hour in props.item.punchOut" :key="hour.time">
-            {{ hour | showHours }}
-          </div>
-        </td>
-      </template>
-      <template v-slot:pageText="props">
-        {{ props.pageStart }} - {{ props.pageStop }} de {{ props.itemsLength }}
-      </template>
-    </v-data-table>
+        <v-data-table
+          :headers="headers"
+          :items="records"
+          :search="search"
+          :loading="loading"
+          no-data-text="Sem pontos para mostrar" 
+          no-results-text="Nenhum resultado encontrado"
+          rows-per-page-text="Linhas por página"
+        >
+          <v-progress-linear v-slot:progress color="blue" indeterminate></v-progress-linear>
+          <template v-slot:items="props">
+            <td>{{ props.item.day}}</td>
+            <td>{{ props.item.name }}</td>
+            <td >
+              <div v-for="hour in props.item.punchIn " :key="hour.time">
+                {{ hour | showHours }}
+              </div>
+            </td>
+            <td>
+              <div v-for="hour in props.item.pauseStart" :key="hour.time">
+                {{ hour | showHours }}
+              </div>
+            </td>
+            <td>
+              <div v-for="hour in props.item.pauseEnd" :key="hour.time">
+                {{ hour | showHours }}
+              </div>
+            </td>
+            <td>
+              <div v-for="hour in props.item.punchOut" :key="hour.time">
+                {{ hour | showHours }}
+              </div>
+            </td>
+          </template>
+          <template v-slot:pageText="props">
+            {{ props.pageStart }} - {{ props.pageStop }} de {{ props.itemsLength }}
+          </template>
+        </v-data-table>
 
-  </v-card>
+      </v-card>
+
+    </v-flex>
+  </v-layout>
+</v-container>
 </template>
 
 <script>
@@ -126,4 +136,12 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  border-radius: 10px;
+}
+.title {
+  font-size: 40px !important;
+  border-left: 5px solid #00bcd4;
+  padding-left: 5px;
+}
 </style>

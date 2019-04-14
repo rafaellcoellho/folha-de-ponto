@@ -1,10 +1,6 @@
 <template>
   <v-app>
-
-    <v-content>
-      <router-view />
-    </v-content>
-    
+    <router-view class="background"/>
   </v-app>
 </template>
 
@@ -14,3 +10,10 @@ export default {
   name: 'App',
 }
 </script>
+
+<style scoped>
+.background {
+  background-color: #00bcd4; 
+}
+</style>
+
