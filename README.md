@@ -1,29 +1,35 @@
-# desafio-pontotel-front-end
+# Desafio Pontotel Front End
 
-## Project setup
-```
-npm install
-```
+O desafio consiste em consumir uma API e mostrar para o usuário uma representação da folha de ponto dos funcionário.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## :wrench: Tecnologias 
 
-### Compiles and minifies for production
-```
-npm run build
-```
+* VueJs
+* VueRouter
+* MomentJs
+* Axios
+* Vuetify
 
-### Run your tests
-```
-npm run test
+## :information_source: Como usar
+
+Antes de iniciar, dar aquele bom e velho: 
+
+```bash
+$ npm install
 ```
 
-### Lints and fixes files
-```
-npm run lint
+Para rodar em desenvolvimento:
+
+```bash
+$ npm run serve
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Compilar e minificar para produção:
+
+```bash
+$ npm run build
+```
+
+## Autor 
+
+* **Rafael Coelho** - [rafaellcoellho](https://github.com/rafaellcoellho)
