@@ -60,13 +60,6 @@ import { folha_de_ponto } from '../api';
 import moment from "moment";
 import 'moment/locale/pt-br' 
 
-const convertArrayToObject = (array, index) => 
-  array.reduce( (obj, item) => {
-    obj[item[index]] = item;
-    return obj;
-  }, {});
-
-
 export default {
   data () {
     return {
@@ -112,10 +105,11 @@ export default {
         });
       })
       .catch(err => {
-        console.log(err);
+        // eslint-disable-next-line 
+        console.error(err);
         alert("Não foi possível carregar os dados!");
       })
-      .then(_ => {
+      .then(() => {
         this.loading = false;
       });
   },

@@ -19,5 +19,5 @@ const api = axios.create({
 });
 
 export const folha_de_ponto = {
-  list: _ => api.get('/desafio_frontend.json'),
+  list: () => api.get('/desafio_frontend.json'),
 };
