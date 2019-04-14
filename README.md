@@ -1,6 +1,6 @@
 # Desafio Pontotel Front End
 
-O desafio consiste em consumir uma API e mostrar para o usuário uma representação da folha de ponto dos funcionário.
+O desafio consiste em consumir uma API e mostrar para o usuário uma representação da folha de ponto dos funcionários.
 
 ## :wrench: Tecnologias 
 
