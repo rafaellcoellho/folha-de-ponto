@@ -1,6 +1,6 @@
 # Folha de Ponto
 
-Esse pequeno app feito em vue consiste em consumir uma API e mostrar para o usuário uma representação da folha de ponto de funcionários.
+Esse pequeno app feito em VueJS consome uma API e mostra para o usuário a folha de ponto dos funcionários.
 
 ## :wrench: Tecnologias 
 
